@@ -1,35 +1,37 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const config = require('./gatsby-config');
 
-// You can delete this file if you're not using it
+exports.onCreatePage = async ({ page, actions: { createPage, deletePage } }) => {
+  const originalPath = page.path;
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
+  // Delete the original page (since we are gonna create localized versions of it)
+  await deletePage(page);
 
-  return new Promise((resolve) => {
-    deletePage(page);
-
-    createPage({
-      ...page,
-      path: page.path,
-      context: {
-        ...page.context,
-        locale: 'zh',
-      },
-    });
-
-    createPage({
-      ...page,
-      path: '/en' + page.path,
-      context: {
-        ...page.context,
-        locale: 'en',
-      },
-    });
-
-    resolve();
+  
+  // create the alias for '/' using zh-hk
+  await createPage({
+    ...page,
+    path: originalPath,
+    context: {
+      ...page.context,
+      originalPath,
+      lang: 'zh-hk',
+    },
   });
+
+  
+  await Promise.all(
+    config.siteMetadata.supportedLanguages.map(async ({ locale }) => {
+      const localizedPath = `/${locale}${page.path}`;
+      await createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          ...page.context,
+          originalPath,
+          lang: locale,
+        },
+      });
+    })
+  );
 };
+
