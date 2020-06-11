@@ -26,7 +26,7 @@ yarn
 
 # copy the default .env file
 
-gatsby develop
+yarn start
 ```
 
 1.  **Open the source code and start editing!**
@@ -96,6 +96,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+This repository already includes a travis build file. Follow this [guide](https://docs.travis-ci.com/user/deployment/pages/) to setup the secret `GITHUB_TOKEN` on travis in order to push the repo to 
