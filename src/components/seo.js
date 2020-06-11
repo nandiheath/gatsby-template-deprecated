@@ -7,10 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from 'react-i18next';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, meta, title }) {
+  const { t, i18n } = useTranslation();
+
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -25,15 +28,15 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || t('app.description')
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: i18n.language,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${t('app.title')}`}
       meta={[
         {
           name: `description`,
@@ -73,14 +76,12 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
   meta: [],
   description: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }

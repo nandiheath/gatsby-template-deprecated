@@ -1,36 +1,33 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Gatsby Template
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This template is aimed at rapid prototyping for Gatsby website project, and with production grade configurations.
+And the libraries chosen is quite opinionated, so if you want to customize your own, creating from scracth maybe a better option.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+- Localization supported with path prefix e.g. `/en/*`
+- Material UI as the UI framework
+- Styled-Component as the styling framework
+- Storybook included for UI testing (TODO)
+- Jest as unit testing framework (TODO)
+- Github Actions included for PR preview/deployment (TODO)
+- Travis CI included for build/deployment (TODO)
+- Cypress included as E2E testing framework (TODO)
+- Google Analytics included (TODO)
+- Sentry (TODO)
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+**Start developing.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Navigate into your new site’s directory and start it up.
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+```shell
+# instal dependencies
+yarn
 
-1.  **Start developing.**
+# copy the default .env file
 
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+gatsby develop
+```
 
 1.  **Open the source code and start editing!**
 
@@ -38,7 +35,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
 
 ## 🧐 What's inside?
 
@@ -47,6 +44,13 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── node_modules
     ├── src
+        ├── components
+        ├── data
+        ├── images
+        ├── libraries
+        ├── locales
+        ├── pages
+    ├── stories        
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js

@@ -1,7 +1,15 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react';
+import { PageContextProvider } from '@/components/templates/PageContext';
+import { createInstance } from '@/i18n';
+import { I18nextProvider } from 'react-i18next';
 
-// You can delete this file if you're not using it
+/**
+ * Wrap all pages with a Translation provider and set the language on SSR time
+ */
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <I18nextProvider i18n={createInstance(props.pageContext.lang)}>
+      <PageContextProvider pageContext={props.pageContext}>{element}</PageContextProvider>
+    </I18nextProvider>
+  );
+};
