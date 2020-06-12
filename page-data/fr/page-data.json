@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-jsx","path":"/fr/","result":{"data":{"allKeyValue":{"edges":[{"node":{"key":"username","value":"HKOSCON"}}]}},"pageContext":{"originalPath":"/","lang":"fr"}}}
+{"componentChunkName":"component---src-pages-index-jsx","path":"/fr/","result":{"data":{"allKeyValue":{"edges":[{"node":{"key":"username","value_zh_hk":"香港開源年會","value_en":"HKOSCON"}}]}},"pageContext":{"originalPath":"/","lang":"fr"}}}
