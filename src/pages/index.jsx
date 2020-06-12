@@ -1,12 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { useTranslation } from 'react-i18next';
+import _get from 'lodash.get';
+
+import Layout from "@/components/layout"
+import Image from "@/components/image"
+import SEO from "@/components/seo"
+import { withLanguage } from '@/libraries/helper/i18n';
 
 
 const IndexPage = ({ data }) => {
 
+  const { i18n } = useTranslation();
+
+  const username = withLanguage(i18n, _get(data, 'allKeyValue.edges[0].node', {}), 'value');
   return (
     <Layout>
       <SEO title="Home" />
@@ -14,7 +21,7 @@ const IndexPage = ({ data }) => {
       <p>
         Welcome,
         {/* The value from the google spreadsheet */}
-        {data.allKeyValue.edges[0].node.value}
+        {username}
 
       </p>
       <p>Now go build something great.</p>
@@ -32,7 +39,8 @@ export const query = graphql`
       edges {
         node {
           key
-          value
+          value_zh_hk
+          value_en
         }
       }
     }
