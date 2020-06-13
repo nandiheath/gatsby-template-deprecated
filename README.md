@@ -1,18 +1,19 @@
 # Gatsby Template
 
 This template is aimed at rapid prototyping for Gatsby website project, and with production grade configurations.
-And the libraries chosen is quite opinionated, so if you want to customize your own, creating from scracth maybe a better option.
+And the libraries chosen is quite opinionated, so if you want to customize your own please just fork it and modify.
 
 - Localization supported with path prefix e.g. `/en/*`
 - Material UI as the UI framework
-- Styled-Component as the styling framework
-- Storybook included for UI testing (TODO)
+- Github Actions for PR preview
+- Storybook for UI testing
+- Travis CI for deploying the website
 - Jest as unit testing framework (TODO)
-- Github Actions included for PR preview/deployment (TODO)
-- Travis CI included for build/deployment (TODO)
-- Cypress included as E2E testing framework (TODO)
-- Google Analytics included (TODO)
-- Sentry (TODO)
+- Styled-Component (TODO)
+- Cypress for E2E testing (TODO)
+- Google Analytics (TODO)
+- Sentry for error reporting(TODO)
+- Prettify 
 
 ## 🚀 Quick start
 

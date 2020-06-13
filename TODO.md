@@ -1,7 +1,0 @@
-- styled-components
-- material UI
-- theme?
-- github-action
-- travis-ci
-- cypress e2e test
-- .env
