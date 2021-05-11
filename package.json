@@ -20,7 +20,7 @@
     "gatsby-transformer-json": "^2.8.0",
     "gatsby-transformer-sharp": "^2.9.0",
     "i18next": "^19.8.4",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "lodash.get": "^4.4.2",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
