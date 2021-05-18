@@ -1,6 +1,6 @@
 # Gatsby Template
 
-This template is deprecated. Please move to [gatsby-template](github.com/nandiheath/gatsby-template) instead.
+This template is deprecated. Please move to [gatsby-template](https://github.com/nandiheath/gatsby-template) instead.
 
 - Localization supported with path prefix e.g. `/en/*`
 - Material UI as the UI framework
